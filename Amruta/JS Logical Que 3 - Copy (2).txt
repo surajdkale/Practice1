@@ -1,0 +1,136 @@
+// function generatePassword() {
+//     const evenChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ#$@";
+//     const oddChars = "0123456789";
+//     let password = "";
+  
+//     for (let i = 0; i < 8; i++) {
+//       if (i % 2 === 0) { // even position
+//         const randomEvenChar = evenChars[Math.floor(Math.random() * evenChars.length)];
+//         password += randomEvenChar;
+//       } else { // odd position
+//         const randomOddChar = oddChars[Math.floor(Math.random() * oddChars.length)];
+//         password += randomOddChar;
+//       }
+//     }
+  
+//     return password;
+//   }
+  
+//   // Example usage:
+//   const password = generatePassword();
+//   console.log(password); // Output example: "1A3DFLK#"
+  
+
+  // !======================================================================
+// let x = 5; 
+// let y = 6; 
+// x += x > y ? x : y; 
+
+// console.log(x); //11
+// --------------------
+// Q. 32
+// const arr = [1, 2, 3]; 
+// arr.forEach((num) =>  num * 2); 
+
+// console.log(arr); //[1,2,3]
+// --------------------
+// Q. 33
+// let a = [1, 2, 3]; 
+// a.push(a[2]++); 
+
+// console.log(a); //[1, 2, 4, 3]
+// ----------------------
+// Q. 34
+// let x; 
+
+// console.log(x); //Undefined
+// -----------
+// Q. 35
+// let x = { 
+// y: "z", 
+// print: () => { 
+// 	return this.y === "z"; 
+// }, 
+// }; 
+
+// console.log(x.print()); //false
+/*
+in the arrow function print(), this.y is actually referencing window.y
+ instead of the y property of the object x.
+Since there's no y defined in the global scope, window.y is undefined,
+ hence the expression this.y === "z" evaluates to false.
+*/
+// -----------------------
+// Q. 36
+// let x = [1, 2, 3]; 
+// let y = x.join(""); 
+
+// console.log(typeof y); //String
+// -----------------------
+// Q. 37
+// let margin = "10px"; 
+// let x = parseInt(margin); 
+
+// console.log(parseInt(x)); //10
+/*parses a string argument and returns an integer. It stops parsing when it encounters a non-digit character.*/
+
+// ----------------------
+// Q. 38
+// setTimeout(() => { 
+// console.log(1); 
+// }, 0); 
+
+// console.log(2); //2 1 Becuz its asynchronous functoin | it doesn't pause the execution of the rest of the code. 
+// It simply means it will be placed in the event queue to be executed as soon as the main thread is free.
+
+// ------------------------
+// Q. 39
+// let x = [1, 2, 3]; 
+// let y = x.map((x, i) => x + i); 
+
+// console.log(y); //[1,3,5]
+//x which represents the current element in the array, and i which represents the index of the current element.
+// -------------------------
+// Q. 40
+// let x = [null, 0, "0", false, "a"]; 
+// let y = x.filter((value) => value); 
+
+// console.log(y); //[ '0', 'a' ]
+//filter function removes all falsy values from the array x, resulting in a new array y containing only truthy values.
+//In this case, "0", "a" are truthy values, while null, 0, false are falsy. So, y will become ["0", "a"].
+// --------------------------
+// Q. 41
+// let x = true; 
+// let y = false; 
+
+// console.log(x + y); //1
+// ---------------------------
+// Q. 42
+// let x = ["apple", "banana", "cherry"]; 
+// let y = x.filter((i) => i.startsWith("b")); 
+
+// console.log(y); //banana
+//In this case, "banana" starts with "b", so it will be included in the resulting array y.
+// ----------------------------
+// Q. 43
+// let x = 10.5; 
+// let y = parseInt(x); 
+
+// console.log(y); //10 
+//When a floating-point number is converted to a string, it will take the integer part of the 
+// number, so 10.5 becomes the string "10". Then, parseInt() parses this string into an integer, which results in 10.
+// -----------------------------
+// Q. 44
+// let x = 1; 
+
+// console.log(x + x++); //2
+// Because here we postincremented not preincremented to get result as 4
+// --------------------------
+// Q. 45
+let x = [1]; 
+let y = x + 1; 
+
+console.log(y); //11
+//When JavaScript tries to concatenate an array with a non-array, it converts the array to a string by joining all its elements together separated by commas.
+// So, [1] becomes the string "1".
+// -----------------------------
